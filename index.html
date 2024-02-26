@@ -1,0 +1,287 @@
+!<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TIẾT 4 - BÀI TẬP NÂNG CAO</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="text-center bg-primary py-3">
+        BÀI 1 - TÌM NGÀY THÁNG NĂM CỦA NGÀY TIẾP THEO - NGÀY HÔM TRƯỚC
+      </h3>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="">Nhập ngày:</label>
+          <input
+            type="number"
+            name=""
+            id="toDay"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Nhập tháng: từ 1 - 12</label>
+          <input
+            type="number"
+            name=""
+            id="toMonth"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Nhập năm:</label>
+          <input
+            type="number"
+            name=""
+            id="toYear"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <button class="btn btn-success my-3" id="handleNextDay">
+        Tìm ngày kế tiếp
+      </button>
+      <button class="btn btn-success my-3" id="handlePreviousDay">
+        Tìm ngày hôm trước
+      </button>
+      <div
+        id="result1"
+        class="bg-primary text-center my-3 font-weight-bold"
+      ></div>
+    </div>
+
+    <div class="container">
+      <h3 class="text-center bg-primary py-3">
+        BÀI 2 - CHO BIẾT NGÀY KHI NHẬP THÁNG NĂM
+      </h3>
+      <div class="row">
+        <div class="form-group col-6">
+          <label for="">Nhập tháng: từ 1 - 12</label>
+          <input
+            type="number"
+            name=""
+            id="numMonth"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="">Nhập năm:</label>
+          <input
+            type="number"
+            name=""
+            id="numYear"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <button class="btn btn-success my-3" id="handleDay">Tính ngày</button>
+      <div
+        id="result2"
+        class="bg-primary text-center my-3 font-weight-bold"
+      ></div>
+    </div>
+
+    <div class="container">
+      <h3 class="text-center bg-primary py-3">
+        BÀI 3 - IN RA CÁCH ĐỌC SỐ NGUYÊN CÓ 3 CHỮ SỐ
+      </h3>
+      <div class="row">
+        <div class="form-group col-12">
+          <label for="">NHẬP SỐ NGUYÊN CÓ 3 CHỮ SỐ : 100 ĐẾN 999</label>
+          <input
+            type="number"
+            name=""
+            id="numSoNguyen"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <button class="btn btn-success my-3" id="handleCachDocNum">
+        In cách đọc
+      </button>
+      <div
+        id="result3"
+        class="bg-primary text-center my-3 font-weight-bold"
+      ></div>
+    </div>
+
+    <div class="container">
+      <h3 class="text-center bg-primary py-3">
+        BÀI 4 - CHO BIẾT SINH VIÊN CÓ NHÀ XA TRƯỜNG NHẤT
+      </h3>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="">Tên sinh viên 1</label>
+          <input
+            type="text"
+            name=""
+            id="tenSinhVien1"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ X của Nhà sinh viên 1</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoX1"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ Y của Nhà sinh viên 1</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoY1"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="">Tên sinh viên 2</label>
+          <input
+            type="text"
+            name=""
+            id="tenSinhVien2"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ X của Nhà sinh viên 2</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoX2"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ Y của Nhà sinh viên 2</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoY2"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="">Tên sinh viên 3</label>
+          <input
+            type="text"
+            name=""
+            id="tenSinhVien3"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ X của Nhà sinh viên 3</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoX3"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ Y của Nhà sinh viên 3</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoY3"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="">Tên Trường</label>
+          <input
+            type="text"
+            name=""
+            id="tenTruong"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ X của Trường</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoXTruong"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group col-4">
+          <label for="">Toạ độ Y của Trường</label>
+          <input
+            type="number"
+            name=""
+            id="toaDoYTruong"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <button class="btn btn-success my-3" id="handleKhoangCach">
+        Sinh viên xa trường nhất
+      </button>
+      <div
+        id="result4"
+        class="bg-primary text-center my-3 font-weight-bold"
+      ></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
