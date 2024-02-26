@@ -387,7 +387,6 @@ Cho biết sinh viên nào nhà xa trường nhất
 B1: Đầu vào
 Tên sinh viên
 Toạ độ x,y của nhà 3 sinh vien, toạ độ trường
-Mặc định toạ độ trường luôn lớn hơn toạ độ nhà của 3 sinh viên.
 
 B2: xử lý
 Công thức tính khoảng cách : Math.sqrt(Math.pow((toaDoXTruong - toaDoXSinhVien), 2) + Math.pow((toaDoYTruong - toaDoYSinhVien), 2))
@@ -406,13 +405,40 @@ function handleKhoangCach() {
     var toaDoY3 = +document.getElementById("toaDoY3").value;
     var toaDoXTruong = +document.getElementById("toaDoXTruong").value;
     var toaDoYTruong = +document.getElementById("toaDoYTruong").value;
-    if (toaDoX1 > toaDoXTruong || toaDoY1 > toaDoYTruong || toaDoX2 > toaDoXTruong || toaDoY2 > toaDoYTruong || toaDoX3 > toaDoXTruong || toaDoY3 > toaDoYTruong) {
-        document.getElementById("result4").innerHTML = `Toạ độ (X,Y) của trường không được nhỏ hơn toạ độ (X,Y) nhà 3 sinh viên`;
-        return;
+    
+    var khoangCach1;
+    if (toaDoXTruong > toaDoX1 && toaDoYTruong > toaDoY1) {
+        khoangCach1 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX1), 2) + Math.pow((toaDoYTruong - toaDoY1), 2));
+    } else if (toaDoXTruong < toaDoX1 && toaDoYTruong > toaDoY1) {
+        khoangCach1 = Math.sqrt(Math.pow((toaDoX1 - toaDoXTruong), 2) + Math.pow((toaDoYTruong - toaDoY1), 2));
+    } else if (toaDoXTruong > toaDoX1 && toaDoYTruong < toaDoY1) {
+        khoangCach1 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX1), 2) + Math.pow((toaDoY1 - toaDoYTruong), 2));
+    } else if (toaDoXTruong < toaDoX1 && toaDoYTruong < toaDoY1) {
+        khoangCach1 = Math.sqrt(Math.pow((toaDoX1 - toaDoXTruong), 2) + Math.pow((toaDoY1 - toaDoYTruong), 2));
     };
-    var khoangCach1 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX1), 2) + Math.pow((toaDoYTruong - toaDoY1), 2));
-    var khoangCach2 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX2), 2) + Math.pow((toaDoYTruong - toaDoY2), 2));
-    var khoangCach3 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX3), 2) + Math.pow((toaDoYTruong - toaDoY3), 2));
+
+    var khoangCach2;
+    if (toaDoXTruong > toaDoX2 && toaDoYTruong > toaDoY2) {
+        khoangCach2 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX2), 2) + Math.pow((toaDoYTruong - toaDoY2), 2));
+    } else if (toaDoXTruong < toaDoX2 && toaDoYTruong > toaDoY2) {
+        khoangCach2 = Math.sqrt(Math.pow((toaDoX2 - toaDoXTruong), 2) + Math.pow((toaDoYTruong - toaDoY2), 2));
+    } else if (toaDoXTruong > toaDoX2 && toaDoYTruong < toaDoY2) {
+        khoangCach2 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX2), 2) + Math.pow((toaDoY2 - toaDoYTruong), 2));
+    } else if (toaDoXTruong < toaDoX2 && toaDoYTruong < toaDoY2) {
+        khoangCach2 = Math.sqrt(Math.pow((toaDoX2 - toaDoXTruong), 2) + Math.pow((toaDoY2 - toaDoYTruong), 2));
+    };
+
+    var khoangCach3;
+    if (toaDoXTruong > toaDoX3 && toaDoYTruong > toaDoY3) {
+        khoangCach3 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX3), 2) + Math.pow((toaDoYTruong - toaDoY3), 2));
+    } else if (toaDoXTruong < toaDoX3 && toaDoYTruong > toaDoY3) {
+        khoangCach3 = Math.sqrt(Math.pow((toaDoX3 - toaDoXTruong), 2) + Math.pow((toaDoYTruong - toaDoY3), 2));
+    } else if (toaDoXTruong > toaDoX3 && toaDoYTruong < toaDoY3) {
+        khoangCach3 = Math.sqrt(Math.pow((toaDoXTruong - toaDoX3), 2) + Math.pow((toaDoY3 - toaDoYTruong), 2));
+    } else if (toaDoXTruong < toaDoX3 && toaDoYTruong < toaDoY3) {
+        khoangCach3 = Math.sqrt(Math.pow((toaDoX3 - toaDoXTruong), 2) + Math.pow((toaDoY3 - toaDoYTruong), 2));
+    };
+
     if (khoangCach1 > khoangCach2) {
         if (khoangCach1 > khoangCach3) {
             document.getElementById("result4").innerHTML = `Nhà sinh viên ${tenSinhVien1} xa trường ${tenTruong} nhất. Khoảng cách là : ${khoangCach1} km`;
